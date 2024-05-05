@@ -11,6 +11,7 @@ print('\nWelcome to Simple Calculator in Python!')
     # 4.) Division
 
 while True:
+
     print("\nChoose an operator from the list (1-4): \n"
           " 1. Addition (➕)\n"
           " 2. Subtraction (➖)\n"
@@ -20,7 +21,7 @@ while True:
 # Check if the inputted option is within range or a number
     try:
         chosen_option = int(input("Enter your chosen operation: "))
-        if chosen_option not in range (1, 4+1):
+        if chosen_option not in range (1, 5):
             print('‼️ Input out of range. Enter numbers 1 to 4 only. ‼️')
             continue
 
@@ -38,23 +39,38 @@ while True:
 
 # Calculate the number and Display the result
     if chosen_option == 1:
-        answer = (first_number) + (second_number)
-        print(f"{first_number} + {second_number} = {answer}")
+        sum = (first_number) + (second_number)
+        print(f"{first_number} + {second_number} = {sum}")
     if chosen_option == 2:
-        answer == (first_number) - (second_number)
-        print(f"{first_number} - {second_number} = {answer}")
+        difference = (first_number) - (second_number)
+        print(f"{first_number} - {second_number} = {difference}")
     if chosen_option == 3:
-        answer == (first_number) * (second_number)
-        print(f"{first_number} x {second_number} = {answer}")
+        product = (first_number) * (second_number)
+        print(f"{first_number} x {second_number} = {product}")
     if chosen_option == 4:
         try:
-            answer == (first_number) / (second_number)
+            product = (first_number) / (second_number)
         except ZeroDivisionError:
             print('Cannot divide by zero.')
             continue
         else:
-            print(f"{first_number} / {second_number} = {answer}")
+            print(f"{first_number} / {second_number} = {product}")
 
 # Ask the user if the user wants to try again or not
     # If yes, the program will repeat
     # If no, the program will exit
+    while True:
+        try:
+            choice = str(input("Do you want to continue? (y,n): "))
+            if choice.lower() == "y":
+                break
+            elif choice.lower() == "n":
+                print("Goodbye!")
+                exit()
+            else:
+                print("Invalid input!")
+        except:
+            print('Exiting the program')
+            exit()
+
+
