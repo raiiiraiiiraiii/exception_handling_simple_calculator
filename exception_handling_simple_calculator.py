@@ -39,7 +39,7 @@ while True:
         print('Input invalid. Enter a valid number.')
         continue
 
-# Display the result
+# Calculate the number and Display the result
 
 # Ask the user if the user wants to try again or not
     # If yes, the program will repeat
