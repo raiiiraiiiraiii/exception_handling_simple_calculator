@@ -15,8 +15,7 @@ while True:
           " 1. Addition (➕)\n"
           " 2. Subtraction (➖)\n"
           " 3. Multiplication (✖️)\n"
-          " 4. Division (➗)\n"
-          " 5. Exit\n")
+          " 4. Division (➗)\n")
 
 # Check if the inputted option is within range or a number
     try:
@@ -24,8 +23,6 @@ while True:
         if chosen_option not in range (1, 4+1):
             print('‼️ Input out of range. Enter numbers 1 to 5 only. ‼️')
             continue
-        if chosen_option == 5:
-            break
 
     except ValueError:
         print('Input invalid. Enter a valid number.')
@@ -57,7 +54,7 @@ while True:
             continue
         else:
             print(f"{first_number} / {second_number} = {answer}")
-            
+
 # Ask the user if the user wants to try again or not
     # If yes, the program will repeat
     # If no, the program will exit
