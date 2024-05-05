@@ -21,7 +21,7 @@ while True:
     try:
         chosen_option = int(input("Enter your chosen operation: "))
         if chosen_option not in range (1, 4+1):
-            print('‼️ Input out of range. Enter numbers 1 to 5 only. ‼️')
+            print('‼️ Input out of range. Enter numbers 1 to 4 only. ‼️')
             continue
 
     except ValueError:
