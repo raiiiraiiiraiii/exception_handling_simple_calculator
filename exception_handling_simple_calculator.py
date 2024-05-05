@@ -40,7 +40,24 @@ while True:
         continue
 
 # Calculate the number and Display the result
-
+    if chosen_option == 1:
+        answer = (first_number) + (second_number)
+        print(f"{first_number} + {second_number} = {answer}")
+    if chosen_option == 2:
+        answer == (first_number) - (second_number)
+        print(f"{first_number} - {second_number} = {answer}")
+    if chosen_option == 3:
+        answer == (first_number) * (second_number)
+        print(f"{first_number} x {second_number} = {answer}")
+    if chosen_option == 4:
+        try:
+            answer == (first_number) / (second_number)
+        except ZeroDivisionError:
+            print('Cannot divide by zero.')
+            continue
+        else:
+            print(f"{first_number} / {second_number} = {answer}")
+            
 # Ask the user if the user wants to try again or not
     # If yes, the program will repeat
     # If no, the program will exit
