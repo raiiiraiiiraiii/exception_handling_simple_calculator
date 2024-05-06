@@ -6,7 +6,7 @@ def slow_print(text):
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.05)  # Adjust the sleep time for faster or slower printing
+        time.sleep(0.03)  # Adjust the sleep time for faster or slower printing
 
 def print_welcome():
     slow_print("\033[1;36;40m")  # Set text color to teal
@@ -90,12 +90,13 @@ while True:
                 break
             elif choice.lower() == "n":
                 print('\n'+'=' * 50)
-                print("\nGoodbye! Thank you for using Simple Calculator.")
+                print()
+                print("Goodbye! Thank you for using Simple Calculator.".center(50, ' '))
                 exit()
             else:
                 print("Invalid input!")
         except:
-            print('Exiting the program\n')
+            print('Exiting the program\n'.center(50, ' '))
             print('=' * 50)
             exit()
 
