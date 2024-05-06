@@ -8,7 +8,7 @@ def slow_print(text):
         sys.stdout.flush()
         time.sleep(0.05)  # Adjust the sleep time for faster or slower printing
 
-def print_congratulations():
+def print_welcome():
     slow_print("\033[1;36;40m")  # Set text color to teal
     slow_print('Welcome to Simple Calculator in Python!'.center(50, ' '))
     slow_print("\033[0;0m")  # Reset text color
@@ -16,7 +16,7 @@ def print_congratulations():
 # Short Message
 print('='*50)
 print()
-print_congratulations()
+print_welcome()
 print()
 print('='*50)
 
