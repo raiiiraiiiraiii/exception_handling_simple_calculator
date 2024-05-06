@@ -2,6 +2,7 @@
 import time
 import sys
 
+#Add color and effect
 def slow_print(text):
     for char in text:
         sys.stdout.write(char)
@@ -13,6 +14,7 @@ def print_welcome():
     slow_print('Welcome to Simple Calculator in Python!'.center(50, ' '))
     slow_print("\033[0;0m")  # Reset text color
     print()
+
 # Short Message
 print('='*50)
 print()
@@ -37,7 +39,7 @@ while True:
 
     # Check if the inputted option is within range or a number
     try:
-        chosen_option = int(input("Enter your chosen operation: "))
+        chosen_option = int(input("Enter your chosen operation: ")) #Let the user choose operation
         if chosen_option not in range (1, 6):
             print('‼️ Input out of range. Enter numbers 1 to 4 only. ‼️')
             continue
@@ -46,9 +48,11 @@ while True:
         print('Input invalid. Enter a valid number.')
         continue
 
+    #Exits program if the user chose '5'
     if chosen_option == 5:
         print("\nGoodbye! Thank you for using Simple Calculator.")
         exit()
+
 # Ask the user for two numbers and validate input
     try:
         print()
@@ -58,8 +62,6 @@ while True:
     except ValueError:
         print('Input invalid. Enter a valid number.')
         continue
-
-
 
 # Calculate the number and Display the result
     if chosen_option == 1:
@@ -72,6 +74,7 @@ while True:
         product = (first_number) * (second_number)
         print(f">>> {first_number} x {second_number} = {product}".center(30, ' '))
     elif chosen_option == 4:
+        #Check if the user is dividing by zero
         try:
             product = (first_number) / (second_number)
         except ZeroDivisionError:
