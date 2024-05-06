@@ -65,7 +65,7 @@ while True:
             if choice.lower() == "y":
                 break
             elif choice.lower() == "n":
-                print("Goodbye!")
+                print("Goodbye! Thank you for using Simple Calculator.")
                 exit()
             else:
                 print("Invalid input!")
