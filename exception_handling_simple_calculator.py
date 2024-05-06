@@ -1,10 +1,23 @@
 #Pseudocode
+import time
+import sys
 
+def slow_print(text):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.05)  # Adjust the sleep time for faster or slower printing
+
+def print_congratulations():
+    slow_print("\033[1;36;40m")  # Set text color to teal
+    slow_print('Welcome to Simple Calculator in Python!'.center(50, ' '))
+    slow_print("\033[0;0m")  # Reset text color
+    print()
 # Short Message
 print('='*50)
 print()
-print('Welcome to Simple Calculator in Python!'.center(50, ' ') + '\n')
-
+print_congratulations()
+print()
 print('='*50)
 
 # Ask the user to choose one of the four math operations
