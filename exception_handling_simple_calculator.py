@@ -20,11 +20,12 @@ while True:
     print("".ljust(5) + "2. Subtraction (➖)")
     print("".ljust(5) + "3. Multiplication (✖️)")
     print("".ljust(5) + "4. Division (➗)")
+    print("".ljust(5) + "5. Exit")
 
     # Check if the inputted option is within range or a number
     try:
         chosen_option = int(input("Enter your chosen operation: "))
-        if chosen_option not in range (1, 5):
+        if chosen_option not in range (1, 6):
             print('‼️ Input out of range. Enter numbers 1 to 4 only. ‼️')
             continue
 
@@ -32,14 +33,20 @@ while True:
         print('Input invalid. Enter a valid number.')
         continue
 
+    if chosen_option == 5:
+        print("\nGoodbye! Thank you for using Simple Calculator.")
+        exit()
 # Ask the user for two numbers and validate input
     try:
         print()
         first_number = float(input('Enter your first number: '))
         second_number = float(input('Enter your second number: '))
+
     except ValueError:
         print('Input invalid. Enter a valid number.')
         continue
+
+
 
 # Calculate the number and Display the result
     if chosen_option == 1:
