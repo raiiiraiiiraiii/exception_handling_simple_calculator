@@ -27,7 +27,7 @@ print('='*50)
     # 4.) Division
 
 while True:
-    print("\nChoose an operator from the list (1-4):")
+    print("\nChoose an operator from the list (1-5):")
     # Print the options with 20 spaces before each line
     print("".ljust(5) + "1. Addition (➕)")
     print("".ljust(5) + "2. Subtraction (➖)")
